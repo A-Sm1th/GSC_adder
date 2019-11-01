@@ -30,7 +30,7 @@ http = credentials.authorize(http)
 
 webmasters_service = build('webmasters', 'v3', http=http)
 
-for website in website_list_clean[17:]:
+for website in website_list_clean:
   try:
     webmasters_service.sites().add(siteUrl=website).execute()
   except Exception as err:
